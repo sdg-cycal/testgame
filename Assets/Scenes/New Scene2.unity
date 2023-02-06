@@ -885,7 +885,6 @@ GameObject:
   - component: {fileID: 410473892}
   - component: {fileID: 410473895}
   - component: {fileID: 410473894}
-  - component: {fileID: 410473893}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -901,25 +900,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410473891}
   m_LocalRotation: {x: 0.16135941, y: -0, z: -0, w: 0.98689574}
-  m_LocalPosition: {x: 0, y: 9, z: -21.1}
+  m_LocalPosition: {x: 0, y: 10, z: -24.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1331264473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 18.572, y: 0, z: 0}
---- !u!114 &410473893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410473891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1120df6ecbc5a784e865a375297b9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &410473894
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1929,7 +1916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021973750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 20.9, z: -172.3}
+  m_LocalPosition: {x: -35.1, y: 20.9, z: 169.8}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2302,15 +2289,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTofollow: {fileID: 875927490}
-  followSpeed: 500
-  sensitivity: 1000
+  followSpeed: 1000
+  sensitivity: 1500
   clampAngle: 70
   realCamera: {fileID: 410473892}
-  dirNormalized: {x: 0, y: 0, z: 0}
+  dirNormalized: {x: -20, y: 20, z: -30}
   finalDir: {x: 0, y: 0, z: 0}
-  minDistance: 0
-  maxDistance: 0
-  finalDistance: 0
+  minDistance: 5
+  maxDistance: 30
+  finalDistance: 5
   smoothness: 10
 --- !u!4 &1331264473
 Transform:
@@ -2320,7 +2307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331264471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.08999997, z: -0.019999696}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
