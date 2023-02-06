@@ -11,6 +11,7 @@ public class CameraMovemont : MonoBehaviour
 
     private float rotX;
     private float rotY;
+    private float rotZ;
 
     public Transform realCamera;
     public Vector3 dirNormalized;
@@ -25,6 +26,7 @@ public class CameraMovemont : MonoBehaviour
     {
         rotX = transform.localRotation.eulerAngles.x;
         rotY = transform.localRotation.eulerAngles.y;
+        rotZ = transform.localRotation.eulerAngles.z;
         dirNormalized = realCamera.localPosition.normalized;
         finalDistance = realCamera.localPosition.magnitude;
 
@@ -35,10 +37,12 @@ public class CameraMovemont : MonoBehaviour
     {
         rotX += -(Input.GetAxis("Mouse Y")) * sensitivity * Time.deltaTime;
         rotY += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-
+        rotZ += Input.GetAxis("Mouse ScrollWheel") * sensitivity * Time.deltaTime;
+        
         rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
-        Quaternion rot = Quaternion.Euler(rotX, rotY, 0);
+        Quaternion rot = Quaternion.Euler(rotX, rotY, rotZ);
         transform.rotation = rot;
+     
     }
     void LateUpdate()
     {
